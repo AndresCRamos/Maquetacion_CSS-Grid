@@ -29,5 +29,27 @@ body {
     &__text {
         color: $secondary-text-color;
     }
+
+    &--grid_1 {
+        @extend .article;
+        display: grid;
+        grid-template: repeat(2, 1fr)/ 50% repeat(2, 1fr);
+        gap: 10px;
+
+        &__text_container {
+            grid-row: span 2;
+        }
+    }
 }
 
+.img_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     &__img {
+         display: block;
+         object-fit: cover;
+         max-width: 100%;
+         max-height: 100%;
+    }
+}
